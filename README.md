@@ -12,4 +12,4 @@ pip freeze > mypiplist.txt
 ```
 
 ## torch_check.py
-You can check the version of CUDA, check if you can use gpu, and check how many gpus you can use. It is useful when you are setting up your environment.
+You can check the version of torch, check if you can use gpu, and check how many gpus you can use. It is useful when you are setting up your environment.
