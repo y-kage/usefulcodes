@@ -14,20 +14,10 @@ pip freeze > mypiplist.txt
 ## torch_check.py
 You can check the version of torch, check if you can use gpu, and check how many gpus you can use. It is useful when you are setting up your environment.
 
-# 2. useful sites
-Some useful sites with some abstract
-
-## How to run process while disconnected from server
-url : https://blog.mktia.com/nohup-and-bg-process-on-remote-server/
-
-- To run process
-```
-nohup python sample.py &
-```
-
-- To apply to running process
-1. Suspend process by "Ctrl + z"
-2. Move process to background by
-   ```bg```
-4. Detatch process from shell by
-   ```disown -h```
+# 2. useful notes
+- Build_new_env.pdf \
+  Building new environment. (cuda, torch, etc.)
+- run_disconnected.md \
+  How to run codes at server while disconnected from server.
+- ssh_server.md \
+  How to connect to remote host by ssh.
