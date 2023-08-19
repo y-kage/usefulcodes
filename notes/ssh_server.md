@@ -1,4 +1,6 @@
-# Client
+# How to connect to remote host by ssh
+
+## Client
 
 1. Move to .ssh (Shell)
 ```
@@ -17,7 +19,7 @@ Host <remote_host>
     IdentityFile ~/.ssh/id_rsa
 ```
 
-# Host (Unverified)
+## Host (Unverified)
 1. Login as root
 ```
 sudo su -
@@ -33,13 +35,13 @@ Some words may not be used
 passwd <remote_username>
 ```
 
-# Connect
+## Connect
 Change <*> to your setting
 ```
 ssh <remote_username>@<remote_host>
 ```
 
-# References
+## References
 - Add User
   https://eng-entrance.com/linux-user-add
 - Connect to Sever
