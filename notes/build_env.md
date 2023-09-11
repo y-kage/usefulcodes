@@ -47,9 +47,24 @@
 - TensorFlow \
   Install by pip.
 
+# Check Installation
+- Nvidia Driver \
+  CUDA version shown is the max supported version by the driver. \
+  ```$ nvidia-smi```
+- CUDA \
+  PATH may not be configured. If so, set PATH or check the directory below /usr/local/. \
+  ```$ nvcc -V```
+- PyTorch and TensorFlow
+  ```python
+  import torch
+  import tensorflow as tf
+
+  print(torch.__version__)
+  print(tf.__version__)
+  ```
 
 # Virtual Environment(VE)
-  Make VE to protect local env and to easily change env
+  Make VE to protect local env and to easily change env.
 - Docker \
   Be carefull to port number.
 - venv
