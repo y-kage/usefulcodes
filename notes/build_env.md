@@ -31,6 +31,22 @@
   ```
 
 # Install
+- CUDA \
+  Find the selected version from [here](https://developer.nvidia.com/cuda-toolkit-archive).
+  Run commands to check your platform.
+  - OS, Architecture \
+    ```$ uname –a```
+  - Distribution, Version \
+    ```$ cat /etc/*release```
+
+  Follow the instructions and run the commands.
+
+- PyTorch \
+  See [here](https://pytorch.org/) for latest or [here](https://pytorch.org/get-started/previous-versions/) for previous versions. \
+  Select the category according to your env, and run the command.
+- TensorFlow \
+  Install by pip.
+
 
 # Virtual Environment(VE)
   Make VE to protect local env and to easily change env
@@ -40,6 +56,7 @@
 - pyenv
 - Anaconda \
   Be careful pip. Run ```$ conda install pip``` in advance. See [here](https://qiita.com/en3/items/99de0098ec5668070f75).
+
 
 # Reference
 - [About Version](https://qiita.com/konzo_/items/a6f2e8818e5e8fcdb896)
