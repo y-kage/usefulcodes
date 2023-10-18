@@ -45,8 +45,8 @@ Use commands at command mode
 
 # Move cursor
 - arrow keys
-- alphabet keys
-  h : left
-  j : down
-  k : up
+- alphabet keys \
+  h : left   \
+  j : down   \
+  k : up     \
   l : right
