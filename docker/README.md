@@ -33,7 +33,7 @@ docker-compose up -d
 If Dockerfile changed, Docker compose up with build
 ```bash
 cd docker
-docker-compose up -d build
+docker-compose up -d --build
 ```
 
 Execute command in Docker
