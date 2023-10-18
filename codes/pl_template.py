@@ -367,15 +367,18 @@ if __name__ == "__main__":
     trainer = pl.Trainer(max_epochs=config.max_epochs, log_every_n_steps=1, accelerator=config.accelerator, devices=config.devices, callbacks=callbacks)
     trainer.fit(model, datamodule=datamodule)
 
-    trainer = pl.Trainer(devices=[0], num_nodes=1)
+    # trainer = pl.Trainer(devices=[0], num_nodes=1)
     trainer.test(model, datamodule=datamodule)
 
 
-    datamodule.prepare_data()
-    datamodule.setup(stage="fit")
-    datamodule.setup(stage="test")
-    mean, std = datamodule.get_mean_std()
-
+    try:
+        mean, std = datamodule.get_mean_std()
+    except:
+        datamodule.prepare_data()
+        datamodule.setup(stage="fit")
+        datamodule.setup(stage="test")
+        mean, std = datamodule.get_mean_std()
+    
     classes = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
     vis_dataset(data_loader=datamodule.train_dataloader(), classes=classes, save_path="cifar10_sample_images.png", mean=mean, std=std, skip=10)
 
