@@ -1,0 +1,13 @@
+lightning
+matplotlib
+numpy
+opencv-python
+tensorflow
+tensorboardX
+torchmetrics
+pandas
+Pillow
+# jupyterlab items
+black
+ipywidgets
+jupyterlab
