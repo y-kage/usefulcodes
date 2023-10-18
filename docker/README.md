@@ -38,12 +38,13 @@ docker-compose up -d --build
 
 Execute command in Docker
 ```bash
-docker exec -it -w /workspace {container_name} bash
+docker exec -it {container_name} bash
+docker exec -it -w {WORK_DIR_PATH} {container_name} bash
 ```
 
 As root
 ```bash
-docker exec -it -u 0 -w /workspace {container_name} bash
+docker exec -it -u 0 -w {WORK_DIR_PATH} {container_name} bash
 ```
 
 Using JupyterLab (Optional)
