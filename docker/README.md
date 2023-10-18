@@ -50,3 +50,13 @@ Using JupyterLab (Optional)
 ```bash
 python -m jupyterlab --ip 0.0.0.0 --port {CONTAINER_PORT} --allow-root
 ```
+
+Using Tensorboard
+- if tensorboard command can be used
+```bash
+tensorboard --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
+```
+- if tensorboard command can not be used
+```bash
+python /home/user_name/.local/lib/python3.9/site-packages/tensorboard/main.py --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
+```
