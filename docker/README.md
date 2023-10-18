@@ -58,5 +58,5 @@ tensorboard --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 -
 ```
 - if tensorboard command can not be used
 ```bash
-python /home/user_name/.local/lib/python3.9/site-packages/tensorboard/main.py --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
+python /home/{USER}/.local/lib/python3.9/site-packages/tensorboard/main.py --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
 ```
