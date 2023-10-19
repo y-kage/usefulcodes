@@ -13,7 +13,7 @@ ENV DEBIAN_FRONTEND="noninteractive"
 ENV PYTHONPATH=${WORKDIR}
 
 RUN apt-get update && apt-get install -y \
-    sudo zip unzip ffmpeg cmake wget
+    sudo zip unzip ffmpeg cmake wget vim screen
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     git curl ssh openssh-client libopencv-dev \
@@ -42,6 +42,9 @@ RUN groupadd -g ${GID} ${GROUP_NAME} && \
 
 USER ${USER_NAME}
 WORKDIR ${WORKDIR}
+
+COPY screenrc.txt ${WORKDIR}
+RUN cp screenrc.txt /home/${USER_NAME}/.screenrc
 
 # Install other libraries
 COPY requirements.txt ${WORKDIR}
