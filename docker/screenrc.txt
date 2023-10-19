@@ -1,0 +1,8 @@
+shell /bin/bash
+autodetach on
+startup_message off
+defscrollback 4096
+hardstatus on
+hardstatus alwayslastline "%-w%{= ck}%n %t%{-}%+w"
+vbell off
+altscreen on
