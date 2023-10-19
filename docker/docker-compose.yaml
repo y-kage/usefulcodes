@@ -19,17 +19,17 @@ services:
     container_name: mydl
     build:
       args:
-        - USER_NAME=${USER}
-        - GROUP_NAME=${USER}
+        - USER_NAME=${INSIDE_USER_NAME}
+        - GROUP_NAME=${INSIDE_USER_NAME}
         - UID=${UID}
         - GID=${GID}
-        - PASSWORD=${USER}
-        - WORKDIR=/workspace
+        # - PASSWORD=${INSIDE_USER_NAME}
+        # - WORKDIR=/home/${INSIDE_USER_NAME}
       context: .
       shm_size: '16gb'
       dockerfile: Dockerfile
     tty: true
     volumes:
-      - "${WORKDIR_LOCAL}:/workspace/"
+      - "${WORKDIR_LOCAL}:/home/${INSIDE_USER_NAME}/"
     ports:
       - "${HOST_PORT}:${CONTAINER_PORT}"
