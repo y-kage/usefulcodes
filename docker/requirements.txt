@@ -1,10 +1,11 @@
-lightning
 matplotlib
 numpy
 opencv-python
+lightning
+torchmetrics
 tensorflow
 tensorboardX
-torchmetrics
+wandb
 pandas
 Pillow
 # jupyterlab items
