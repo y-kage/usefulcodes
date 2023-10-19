@@ -53,22 +53,14 @@ python -m jupyterlab --ip 0.0.0.0 --port {CONTAINER_PORT} --allow-root
 ```
 
 Using Tensorboard
-- if tensorboard command can be used
 ```bash
 tensorboard --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
-```
-- if tensorboard command can not be used
-```bash
 python /home/{USER}/.local/lib/python3.9/site-packages/tensorboard/main.py --logdir=/workspace/PytorchLightning/lightning_logs --host=0.0.0.0 --port={CONTAINER_PORT}
 ```
 
 Login W & D
-- if wandb command can be used
 ```bash
 wandb login
-```
-- if tensorboard command can not be used
-```bash
 python3 -m wandb login
 /usr/bin/python3 -m wandb login
 ```
