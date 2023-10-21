@@ -7,13 +7,15 @@ ARG GROUP_NAME=dockers
 ARG UID=1000
 ARG GID=1000
 ARG PASSWORD=${USER_NAME}
-ARG WORKDIR=/home/${USER_NAME}
+ARG WORKDIR=/home/${USER_NAME}/workspace
 
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV PYTHONPATH=${WORKDIR}
 
 RUN apt-get update && apt-get install -y \
-    sudo zip unzip ffmpeg cmake wget vim screen
+    sudo zip unzip ffmpeg cmake wget vim screen \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     git curl ssh openssh-client libopencv-dev \
@@ -27,7 +29,7 @@ RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python${PYTH
     && python3 -m pip install --upgrade pip setuptools \
     && rm -rf /var/lib/apt/lists/*
 
-# Install pytorch
+# # Install pytorch
 RUN python3 -m pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113 \
     && rm -rf /var/lib/apt/lists/*
 
@@ -35,10 +37,6 @@ RUN python3 -m pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchau
 RUN groupadd -g ${GID} ${GROUP_NAME} && \
     useradd -ms /bin/bash -u ${UID} -g ${GID} -G sudo ${USER_NAME} && \
     echo ${USER_NAME}:${PASSWORD} | chpasswd
-
-# # Add user without sudo
-# RUN groupadd -g ${GID} ${GROUP_NAME} \
-#     && useradd -ms /bin/bash -u ${UID} -g ${GID} ${USER_NAME}
 
 USER ${USER_NAME}
 WORKDIR ${WORKDIR}
