@@ -1,35 +1,30 @@
 services:
   pytorch-env:
-    # runtime: nvidia
-    command: bash # /sbin/init
+    command: bash
     deploy:
       resources:
         reservations:
           devices:
           - driver: nvidia
-            # device_ids: ['1', '2', '3', '4', '5']
             count: all
             capabilities: [gpu]
     shm_size: '16gb'
     user: "${UID}:${GID}"
-    # environment:
-    #   - NVIDIA_VISIBLE_DEVICES=all
-    #   - NVIDIA_DRIVER_CAPABILITIES=all
     image: ${USER}/pytorch:1131
     container_name: mydl
     build:
       args:
-        - USER_NAME=${INSIDE_USER_NAME}
-        - GROUP_NAME=${INSIDE_USER_NAME}
+        - USER_NAME=${USER_NAME}
+        - GROUP_NAME=${USER_NAME}
         - UID=${UID}
         - GID=${GID}
-        # - PASSWORD=${INSIDE_USER_NAME}
-        # - WORKDIR=/home/${INSIDE_USER_NAME}
+        - PASSWORD=${USER_NAME}
+        - WORKDIR=${WORKDIR_CONTAINER}
       context: .
       shm_size: '16gb'
       dockerfile: Dockerfile
     tty: true
     volumes:
-      - "${WORKDIR_LOCAL}:/home/${INSIDE_USER_NAME}/"
+      - "${WORKDIR_LOCAL}:${WORKDIR_CONTAINER}"
     ports:
       - "${HOST_PORT}:${CONTAINER_PORT}"
