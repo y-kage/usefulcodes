@@ -10,8 +10,8 @@ services:
             capabilities: [gpu]
     shm_size: '16gb'
     user: "${UID}:${GID}"
-    image: ${USER}/pytorch:1131
-    container_name: mydl
+    image: ${USER}/${IMAGE_LABEL}
+    container_name: ${CONTAINER_NAME}
     build:
       args:
         - USER_NAME=${USER_NAME}
