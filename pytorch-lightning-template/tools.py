@@ -1,13 +1,15 @@
 import os
+import sys
 import wandb
 import torch
 import matplotlib.pyplot as plt
 import numpy as np
+from pycocotools.coco import COCO
 
 
 class Visualize():
 
-    def vis_dataset(data_loader=None, model=None, classes= None, save_path="results.png", mean=None, std=None, max_in_row=5, skip=0, to_wandb=False):
+    def vis_dataset(self, data_loader=None, model=None, classes= None, save_path="results.png", mean=None, std=None, max_in_row=5, skip=0, to_wandb=False):
         class_num = len(classes)
         image_list = []
         class_list = []
@@ -91,6 +93,30 @@ class Visualize():
                 os.makedirs(_dir)
         plt.savefig(save_path)
         plt.close()
+    
+    def coco_vis(self, img_id:int=64, draw_bbox=True):
+
+        anno_path = "../data/coco/annotations/instances_train2017.json"
+        if not os.path.exists(anno_path):
+            print(f"file not found: {anno_path}")
+            sys.exit()
+        coco = COCO(anno_path)
+
+        ann_ids = coco.getAnnIds(imgIds=img_id)
+        annos = coco.loadAnns(ann_ids)
+
+        img = coco.loadImgs(img_id)[0]
+        image_path = '../data/coco/train2017/' + img['file_name']
+        if not os.path.exists(anno_path):
+            print(f"file not found: {image_path}")
+            sys.exit()
+        I = plt.imread(image_path)
+
+        plt.imshow(I); 
+        coco.showAnns(anns=annos, draw_bbox=draw_bbox)
+        plt.axis('off')
+
+        plt.savefig(f'result_coco_vis_{img_id}.png', bbox_inches='tight', pad_inches=0)
 
 
 if __name__ == "__main__":
