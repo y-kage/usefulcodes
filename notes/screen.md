@@ -34,3 +34,6 @@
   ```bash
   Ctrl+a  ]
   ```
+
+- reference
+  [Linux screenコマンド使い方](https://qiita.com/hnishi/items/3190f2901f88e2594a5f)
