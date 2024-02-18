@@ -21,7 +21,7 @@
   ```
   $ ssh -i id_rsa [remote user]@[remote host IP]
   ```
-- Change "~/.ssh/config" file\
+- Change "~/.ssh/config" file \
    Change <*> parts, and add to config file \
    ```
    Host <remote_host_name>
@@ -29,7 +29,7 @@
       User <remote_username>
       IdentityFile ~/.ssh/id_rsa
    ```
-   Then, connect by <remote_host_name> or <IP-adress>
+   Then, connect by remote_host_name or IP adress
    ```
    $ ssh [remote user]@[remote host IP]
    or
