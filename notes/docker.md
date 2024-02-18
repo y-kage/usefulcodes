@@ -2,8 +2,6 @@
 ## Docker
 Follow the instructions
 - [Docker Engine](https://docs.docker.com/engine/install/ubuntu/)
-- [Docker Compose](https://docs.docker.com/compose/install/linux/)
-- [Rootless Mode](https://docs.docker.com/engine/security/rootless/)
 
 ## NVIDIA Container Toolkit
 Follow the instructions [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
