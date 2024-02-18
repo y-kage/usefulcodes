@@ -7,7 +7,7 @@
     - [PyTorch](https://github.com/pytorch/pytorch/blob/master/RELEASE.md) \
       (Example)
       <img width="452" alt="image" src="https://github.com/y-kage/usefulcodes/assets/125951749/82fbc561-f29b-4c47-bb2e-cbd9cd931359">
-    - [TensorFlow](https://www.tensorflow.org/install?hl=ja)
+    - [TensorFlow](https://www.tensorflow.org/install?hl=ja) \
       (Example)
       <img width="361" alt="image" src="https://github.com/y-kage/usefulcodes/assets/125951749/aa7bf2a4-c30a-4581-84b9-edb4669cdcc3">
   - NVIDIA Driver \
