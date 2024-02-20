@@ -44,6 +44,12 @@ $ sudo apt -y update
 $ sudo apt -y install openssh-server
 ```
 
+Might need to restart
+```bash
+$ sudo systemctl start sshd
+$ sudo systemctl enable sshd
+```
+
 ### - Make User
 - Add User
   ```bash
@@ -61,3 +67,4 @@ $ sudo apt -y install openssh-server
 - [Connect to Sever](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-ja)
 - [Make Server](https://www.kkaneko.jp/tools/server/pubkey.html)
 - [Make User](https://www-creators.com/archives/241)
+- [SSH Server](https://docs.oracle.com/cd/F61410_01/openssh/openssh-ConfiguringOpenSSHServer.html#modify-server-config)
