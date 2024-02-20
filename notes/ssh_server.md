@@ -44,7 +44,7 @@ $ sudo apt -y update
 $ sudo apt -y install openssh-server
 ```
 
-Might need to restart
+Might need to restart systemctl
 ```bash
 $ sudo systemctl start sshd
 $ sudo systemctl enable sshd
