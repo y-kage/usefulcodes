@@ -67,7 +67,8 @@
   Make VE to protect local env and to easily change env.
 - Docker \
   Be carefull to port number.
-- venv
+- venv \
+  See [here](https://zerofromlight.com/blogs/detail/4/) if not installed
 - pyenv
 - Anaconda \
   Be careful pip. Run ```$ conda install pip``` in advance. See [here](https://qiita.com/en3/items/99de0098ec5668070f75).
