@@ -32,6 +32,10 @@
 
 # Install
 - CUDA \
+  Run the command below to get information of nvidia driver in advance.
+  ```bash
+  $ sudo add-apt-repository ppa:graphics-drivers/ppa
+  ```
   Find the selected version from [here](https://developer.nvidia.com/cuda-toolkit-archive).
   Run commands to check your platform.
   - OS, Architecture \
