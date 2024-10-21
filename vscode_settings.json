@@ -25,7 +25,7 @@
     ],
     "flake8.args": [
         "--max-line-length", "88",
-        "--extend-ignore", "E203,E701,E266"
+        "--extend-ignore", "E203,E701,E266,E402"
     ],
     "python.terminal.activateEnvironment": false,
 }
