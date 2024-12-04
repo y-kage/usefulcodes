@@ -16,7 +16,7 @@
     If any detail came out, Nouveau should be disabled. See [here](https://k-hyoda.hatenablog.com/entry/2020/07/09/223907).
     
 - Remove CUDA (If needed)\
-  Check /usr/local/. If directory including 'cuda' in the name does not exist, cuda is installed. If you want to remove, run the commands below. See [here](https://qiita.com/harmegiddo/items/86b295ccf96eff489e02).
+  Check /usr/local/. If directory including 'cuda' in the name does not exist, cuda is installed. If you want to remove, run the commands below. See [here](https://qiita.com/harmegiddo/items/86b295ccf96eff489e02). When multiple version existing, change it using ```sudo update-alternatives --config cuda```. See [here](https://qiita.com/ketaro-m/items/4de2bd3101bcb6a6b668).
   ```
   $ sudo apt-get --purge remove nvidia*
   $ sudo apt-get --purge remove cuda*
