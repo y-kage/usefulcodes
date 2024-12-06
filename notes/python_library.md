@@ -1,3 +1,4 @@
+# 1
 - [PyTorch](https://pytorch.org/get-started/previous-versions/) \
   Machine Learning Framework
   ```bash
@@ -7,7 +8,10 @@
 - [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) \
   Easy writing PyTorch
   ```bash
+  # >= 2.0
   pip install lightning
+  # < 2.0
+  pip install pytorch-lightning
   ```
 - [PyTorch3D](https://github.com/facebookresearch/pytorch3d) \
   Library for 3D
@@ -21,6 +25,21 @@
   # Install after PyTorch
   pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
   ```
+- [xFormers](https://github.com/facebookresearch/xformers) \
+  ```bash
+  # Be careful CUDA version
+  pip install -U xformers --index-url https://download.pytorch.org/whl/cu124
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+# 2
 - [IceCream](https://github.com/gruns/icecream) \
   Faster print()
   ```bash
@@ -31,13 +50,58 @@
   ```bash
   pip install decord
   ```
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Rembg](https://github.com/danielgatis/rembg) \
+  Remove image background
+  ```bash
+  pip install "rembg[cli]"
+  ```
+- [PyTorch Image Quality](https://github.com/photosynthesis-team/piq) \
+  Collection of measures and metrics for image quality assessment
+  ```bash
+  pip install piq
+  ```
+- [Trimesh](https://github.com/mikedh/trimesh) \
+  loading and using triangular meshes
+  ```bash
+  pip install trimesh
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+- []() \
+  ```bash
+  ```
+
