@@ -27,13 +27,14 @@
   ```
 - [xFormers](https://github.com/facebookresearch/xformers) \
   ```bash
-  # Be careful CUDA version
-  pip install -U xformers --index-url https://download.pytorch.org/whl/cu124
+  # Be careful CUDA & PyTorch version. For CUDA 12.4, PyTorch 2.4.1
+  pip install xformers==0.0.28.post1
   ```
-- []() \
+- [Diffusers](https://github.com/huggingface/diffusers) \
   ```bash
+  pip install --upgrade diffusers[torch]
   ```
-- []() \
+- [Accelerate](https://github.com/huggingface/accelerate) \
   ```bash
   ```
 - []() \
@@ -65,8 +66,10 @@
   ```bash
   pip install trimesh
   ```
-- []() \
+- [PyMCubes](https://github.com/pmneila/PyMCubes) \
+  Implementation of the marching cubes algorithm
   ```bash
+  pip install --upgrade PyMCubes
   ```
 - []() \
   ```bash
