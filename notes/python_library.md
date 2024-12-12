@@ -80,13 +80,13 @@
 - [Shapely](https://github.com/shapely/shapely) \
   ```bash
   ```
-- []() \
+- [Submit it!](https://github.com/facebookincubator/submitit) \
   ```bash
   ```
-- []() \
+- [einops](https://github.com/arogozhnikov/einops) \
   ```bash
   ```
-- []() \
+- [Natural Order String Comparison](https://github.com/sourcefrog/natsort) \
   ```bash
   ```
 - []() \
