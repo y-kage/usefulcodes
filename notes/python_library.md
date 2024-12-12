@@ -71,13 +71,13 @@
   ```bash
   pip install --upgrade PyMCubes
   ```
-- []() \
+- [gdown](https://github.com/wkentaro/gdown) \
   ```bash
   ```
-- []() \
+- [HDF5](https://github.com/h5py/h5py?tab=readme-ov-file) \
   ```bash
   ```
-- []() \
+- [Shapely](https://github.com/shapely/shapely) \
   ```bash
   ```
 - []() \
