@@ -31,6 +31,8 @@
   ```
 
 # Install
+- NVIDIA Driver
+  See [here](https://qiita.com/porizou1/items/74d8264d6381ee2941bd)
 - CUDA \
   Run the command below to get information of nvidia driver in advance.
   ```bash
