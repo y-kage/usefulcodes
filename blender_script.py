@@ -11,25 +11,24 @@ import numpy as np
 
 DEBUG = False
 
-RESULTS_PATH = "test/1"
+RESULTS_PATH = "output/test_1"
 COLOR_DEPTH = 8
 FORMAT = "PNG"
-RESOLUTION_X = 7680
-RESOLUTION_Y = 3840
+RESOLUTION_X = 8192
+RESOLUTION_Y = 8192
 RESOLUTION_PERCENTAGE = 100
-CAMERA_TYPE = "PANO"  # 'PANO', 'ORTHO' or 'PERSP'
-PANORAMA_TYPE = "EQUIRECTANGULAR"
-CAMERA_NAME = "Camera"
+CAMERA_TYPE = "PERSP"  # 'PANO', 'ORTHO' or 'PERSP'
+CAMERA_NAME = "Camera_2"
 
 DEPTH_IN_BLENDER_MIN = 0.0
-DEPTH_IN_BLENDER_MAX = 6.0
+DEPTH_IN_BLENDER_MAX = 1000.0
 DEPTH_OUTPUT_MIN = 1.0  # white
 DEPTH_OUTPUT_MAX = 0.0  # black
 BACKGROUND_TRANSPARENT = False
 FILE_DIGITS = 6
 
 # If USE_ANIMATION is True, VIEWS and MAX_ANGLE will be ignored
-USE_ANIMATION = True
+USE_ANIMATION = False
 if USE_ANIMATION is False:
     VIEWS = 5  # 4000
     MAX_ANGLE = 360.0
@@ -170,7 +169,7 @@ scene.render.use_motion_blur = False
 
 cam = scene.objects[CAMERA_NAME]
 cam.data.type = CAMERA_TYPE
-if cam.data.type is "PANO":
+if cam.data.type == "PANO":
     cam.data.panorama_type = "EQUIRECTANGULAR"
 
 if USE_ANIMATION is False:
