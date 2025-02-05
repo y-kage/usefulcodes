@@ -44,6 +44,7 @@ skip_to = 0
 if CAMERA_NAME is None:
     cameras = [obj for obj in bpy.data.objects if obj.type == "CAMERA"]
     if len(cameras) == 1:
+        cam = cameras[0]
         CAMERA_NAME = cam.name
     elif len(cameras) > 1:
         raise ValueError(
