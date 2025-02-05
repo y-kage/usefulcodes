@@ -18,7 +18,7 @@ RESOLUTION_X = 8192
 RESOLUTION_Y = 8192
 RESOLUTION_PERCENTAGE = 100
 CAMERA_TYPE = "PERSP"  # 'PANO', 'ORTHO' or 'PERSP'
-CAMERA_NAME = "Camera_2"
+CAMERA_NAME = None
 
 DEPTH_IN_BLENDER_MIN = 0.0
 DEPTH_IN_BLENDER_MAX = 1000.0
@@ -39,6 +39,19 @@ if USE_ANIMATION is False:
 
 max_cache_frame = 1000
 skip_to = 0
+
+# Automatically select the camera when CAMERA_NAME is None
+if CAMERA_NAME is None:
+    cameras = [obj for obj in bpy.data.objects if obj.type == "CAMERA"]
+    if len(cameras) == 1:
+        CAMERA_NAME = cam.name
+    elif len(cameras) > 1:
+        raise ValueError(
+            f"Multiple cameras found ({[cam.name for cam in cameras]}). "
+            "Please manually set CAMERA_NAME."
+        )
+    else:
+        raise ValueError("No camera found in the scene. Please add a camera.")
 
 fp = bpy.path.abspath(f"//{RESULTS_PATH}")
 
