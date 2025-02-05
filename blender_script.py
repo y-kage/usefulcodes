@@ -52,6 +52,10 @@ if CAMERA_NAME is None:
         )
     else:
         raise ValueError("No camera found in the scene. Please add a camera.")
+else:
+    cam = bpy.data.objects.get(CAMERA_NAME)
+    if cam is None or cam.type != "CAMERA":
+        raise ValueError(f"Camera with name '{CAMERA_NAME}' not found or is not a valid camera.")
 
 fp = bpy.path.abspath(f"//{RESULTS_PATH}")
 
