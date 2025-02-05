@@ -68,8 +68,12 @@ tree = bpy.context.scene.node_tree
 links = tree.links
 
 # Add passes for additionally dumping albedo and normals.
-# if Blender version < 2.7, change ViewLayer to RenderLayer
-bpy.context.scene.view_layers["ViewLayer"].use_pass_normal = True
+try:
+    layer = bpy.context.scene.view_layers["ViewLayer"]
+except (AttributeError, KeyError):
+    layer = bpy.context.scene.view_layers["RenderLayer"]
+
+layer.use_pass_normal = True
 bpy.context.scene.render.image_settings.file_format = str(FORMAT)
 bpy.context.scene.render.image_settings.color_depth = str(COLOR_DEPTH)
 
