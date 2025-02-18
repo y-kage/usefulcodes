@@ -46,6 +46,8 @@
   ```bash
   pip install supervision
   ```
+- [sahi](https://github.com/obss/sahi)
+  Slicing images for detection on resolution image
 - [IceCream](https://github.com/gruns/icecream) \
   Faster print()
   ```bash
