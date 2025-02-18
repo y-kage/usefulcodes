@@ -41,6 +41,11 @@
   ```bash
   ```
 # 2
+- [supervision](https://github.com/roboflow/supervision) \
+  Do computer vision tasks
+  ```bash
+  pip install supervision
+  ```
 - [IceCream](https://github.com/gruns/icecream) \
   Faster print()
   ```bash
