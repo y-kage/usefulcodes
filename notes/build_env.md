@@ -10,7 +10,7 @@
     - [TensorFlow](https://www.tensorflow.org/install?hl=ja) \
       (Example) \
       <img width="361" alt="image" src="https://github.com/y-kage/usefulcodes/assets/125951749/aa7bf2a4-c30a-4581-84b9-edb4669cdcc3">
-    - Command for knowing GPU compute capability \
+    - Command for knowing GPU compute capability
       ```bash
       nvidia-smi --query-gpu=compute_cap --format=csv
       ```
